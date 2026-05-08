@@ -1,59 +1,35 @@
 # AeroPlan - Dynamic Trip Planner
 
-A modern, responsive, and dynamic trip-planning application built with React, Vite, and Framer Motion. This project fulfills the RICE framework principles for the PromptWars Main Challenge.
+## What is this App used for?
 
-## Features & Implementation of Principles
+**AeroPlan** is an intelligent, dynamic trip-planning application designed to adapt to real-time travel disruptions. 
 
-1. **Code Quality**: 
-   - The app is thoroughly structured into maintainable and reusable React components (`Sidebar`, `Itinerary`, `Toasts`).
-   - Strong typing via TypeScript interfaces (`types.ts`) ensures readability and maintainability.
-   - Clean, modular code separation between UI components and logical state.
+Travelers often struggle with rigid, static itineraries that break down when unexpected events occur (such as sudden bad weather or flight delays). AeroPlan solves this by allowing users to input their specific destination, interests, and constraints (budget, dietary, mobility constraints), and automatically generating a customized, robust itinerary. 
 
-2. **Security**: 
-   - **Input Sanitization**: Basic validation and sanitization implemented for the destination input to prevent potential XSS vulnerabilities.
-   - **Safe External Links**: Google Calendar API integration is carefully constructed with proper URL encoding for user safety.
+Most importantly, it features **Dynamic Adjustments**: if a real-time event occurs (e.g., heavy rain during an outdoor tour), AeroPlan will immediately recalculate the itinerary, swap the affected activity with a viable alternative (like an indoor museum), and alert the user via push notifications—ensuring a seamless and stress-free travel experience.
 
-3. **Efficiency**: 
-   - Built on Vite for lightning-fast HMR and optimized production builds.
-   - Core functions (`toggleSelection`, `handleGenerate`, `simulateWeatherEvent`) are wrapped in `useCallback`, and components are wrapped in `React.memo` to eliminate unnecessary DOM re-renders.
+---
 
-4. **Testing**: 
-   - Core functionalities are covered using **Vitest** and **React Testing Library**.
-   - Includes UI rendering tests, input validation tests, and asynchronous API mocking tests.
-   - Run tests via `npm run test`.
+## How to Run the App
 
-5. **Accessibility (a11y)**: 
-   - Extensive usage of ARIA attributes (`aria-label`, `aria-hidden`, `aria-live`).
-   - Accessible form groups (`fieldset`, `legend`, `htmlFor`).
-   - Full keyboard navigation support (`tabIndex`, `onKeyDown`) for inclusive and accessible usage.
+Follow these simple steps to run the application locally on your machine:
 
-6. **Google Services Integration**: 
-   - Features a **"Add to Google Calendar"** integration that allows users to instantly export generated dynamic itinerary activities straight to their personal Google Calendar via a parameterized template URL.
+1. **Open your terminal** and navigate to the `trip-planner` directory:
+   ```bash
+   cd trip-planner
+   ```
 
-## Getting Started
+2. **Install the required dependencies** (you only need to do this once):
+   ```bash
+   npm install
+   ```
 
-### Installation
-```bash
-# Navigate to the project directory
-cd trip-planner
+3. **Start the Development Server**:
+   ```bash
+   npm run dev
+   ```
 
-# Install all required dependencies
-npm install
-
-# Run the development server
-npm run dev
-```
-
-### Running Tests
-To validate the application's functionality:
-```bash
-npm run test
-```
-
-## Technologies Used
-- React 18 & TypeScript
-- Vite
-- Framer Motion (for smooth animations)
-- Lucide React (for premium iconography)
-- Vitest & React Testing Library
-- Vanilla CSS (with glassmorphism aesthetic)
+4. **Open the App in your Browser**:
+   Once the server starts, it will print a local URL in your terminal (typically `http://localhost:5173/` or `http://localhost:5174/`). 
+   - `Ctrl + Click` that link in your terminal, or 
+   - Copy and paste it into your web browser to view and use the app!
