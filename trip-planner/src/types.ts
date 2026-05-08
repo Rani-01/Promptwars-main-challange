@@ -9,6 +9,7 @@ export type ItineraryItem = {
   alert?: string;
   icon: React.ReactNode;
   location?: string;
+  coordinates?: { lat: number, lng: number };
 };
 
 export type ToastMessage = {

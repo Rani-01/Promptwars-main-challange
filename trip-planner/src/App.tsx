@@ -54,7 +54,9 @@ export default function App() {
           title: 'Breakfast at Cafe de Flore',
           description: 'Start your day with a classic French breakfast. (Vegetarian options available)',
           tags: ['Culinary', '$$'],
-          icon: <Coffee size={18} />
+          icon: <Coffee size={18} />,
+          location: 'Cafe de Flore, Paris',
+          coordinates: { lat: 48.8541, lng: 2.3326 }
         },
         {
           id: '2',
@@ -62,7 +64,9 @@ export default function App() {
           title: 'Eiffel Tower Guided Tour',
           description: 'Pre-booked skip-the-line access to the summit.',
           tags: ['Historical', 'Sightseeing', '$$$'],
-          icon: <Landmark size={18} />
+          icon: <Landmark size={18} />,
+          location: 'Eiffel Tower, Paris',
+          coordinates: { lat: 48.8584, lng: 2.2945 }
         },
         {
           id: '3',
@@ -70,7 +74,9 @@ export default function App() {
           title: 'Lunch at L\'Avenue',
           description: 'Upscale dining with a view. Reserved corner table.',
           tags: ['Culinary', '$$$'],
-          icon: <Utensils size={18} />
+          icon: <Utensils size={18} />,
+          location: "L'Avenue, Paris",
+          coordinates: { lat: 48.8665, lng: 2.3040 }
         },
         {
           id: '4',
@@ -78,7 +84,9 @@ export default function App() {
           title: 'Seine River Cruise',
           description: 'Relaxing 2-hour boat tour across the river Seine.',
           tags: ['Relaxation', '$$'],
-          icon: <Navigation size={18} />
+          icon: <Navigation size={18} />,
+          location: 'Port de la Bourdonnais, Paris',
+          coordinates: { lat: 48.8596, lng: 2.2934 }
         }
       ]);
       setIsGenerating(false);
@@ -100,7 +108,9 @@ export default function App() {
           description: 'Swapped due to rain. Pre-booked fast track entry for the art exhibits.',
           tags: ['Art', 'Historical', 'Indoor', '$$'],
           alert: 'Auto-swapped due to weather change',
-          icon: <Landmark size={18} />
+          icon: <Landmark size={18} />,
+          location: 'Louvre Museum, Paris',
+          coordinates: { lat: 48.8606, lng: 2.3376 }
         };
         return newItinerary;
       });
